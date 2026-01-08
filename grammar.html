@@ -233,7 +233,7 @@
         const quiz = quizzes.find(q => q.answer === correctIndex);
 
         if (userAnswer === correctIndex) {
-        document.getElementById('successMessage').textContent = "解析：" + quiz.options[correctIndex] + "\n" + explanation;
+        document.getElementById('successMessage').textContent = "解析：" + "\n" + explanation;
         document.getElementById('successModal').style.display = 'block';
         document.getElementById('successImage').src = 'zhengque.jpeg';
     function closesuccessModal() {
