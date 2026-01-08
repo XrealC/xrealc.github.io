@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>英语专升本备考Tips</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .banner {
+            background-color: #d1e7ff;
+            color: #0033cc;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px auto;
+            max-width: 800px;
+            cursor: pointer; /* 鼠标变成手型 */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .banner:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        .nav {
+            background: #1e40af;
+            padding: 12px 0;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .nav a:hover {
+            background: #334155;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #1e40af;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        /* 鼓励语横幅 */
+        .banner {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e40af;
+            margin-top: 20px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+            border: 1px solid #dbeafe;
+            letter-spacing: 1px;
+        }
+        /* 跳转按钮 */
+        .btn-go-vocab {
+            display: block;
+            width: fit-content;
+            margin: 25px auto 0;
+            padding: 12px 30px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn-go-vocab:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">首页</a>
+        <a href="vocab.html">词汇备考</a>
+        <a href="grammar.html">语法重难点</a>
+        <a href="skills.html">题型解题</a>
+        <a href="plan.html">备考计划</a>
+    </div>
+
+    <div class="container">
+        <h1>🎯 英语专升本备考指南</h1>
+        <a href="https://www.qianwen.com" target="_blank"><span style="font-size: medium;">借用AI学习，可以更高效的理解英语</span></a>
+        <br>
+        <a><span style="font-size: 10px; color: #64748b;">注：本网页所有内容，均参考于大雁老师专升本</span></a>
+        <p>欢迎使用本备考资源站！我们为你整理了：</p>
+        <ul>
+            <li>✅ 高频核心词汇（20个精选）</li>
+            <li>✅ 三大语法重难点详解</li>
+            <li>✅ 四大题型解题技巧</li>
+            <li>✅ 分阶段备考计划 + 倒计时提醒</li>
+        </ul>
+        <p>点击上方导航栏或下方按钮开始学习吧！</p>
+        
+        <!-- 鼓励语横幅 -->
+        <div class="banner" onclick="changeQuote()">
+            No pains, No gains.
+        </div>
+
+        <!-- 跳转到背单词页面的按钮 -->
+        <a href="vocab.html" class="btn-go-vocab">📚 立即背单词</a>
+    </div>
+</body>
+<script>
+    const quotes = [
+        "No pains, No gains.",
+        "A great future ahead,I earn it myself.",
+        "English is the key to understanding the wlord.",
+        "Believe you can and you're halfway there.",
+        "Dream big and dare to fail.",
+        "Every day is a new beginning.",
+        "You can become anything you want."
+    ];
+    let currentQuoteIndex = 0;
+
+    function changeQuote() {
+        const banner = document.querySelector('.banner');
+        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+        banner.textContent = quotes[currentQuoteIndex];
+    }
+</script>
+</html>

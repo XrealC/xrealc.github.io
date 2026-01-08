@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>题型解题技巧 - 英语专升本</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .nav {
+            background: #1e40af;
+            padding: 12px 0;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .nav a:hover {
+            background: #334155;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #1e40af;
+            text-align: center;
+        }
+        .tab-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            background: #e2e8f0;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 0 5px 10px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .tab-btn.active {
+            background: #3b82f6;
+            color: white;
+        }
+        .tab-item {
+            display: none;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .tab-item.active {
+            display: block;
+        }
+        .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">首页</a>
+        <a href="vocab.html">词汇备考</a>
+        <a href="grammar.html">语法重难点</a>
+        <a href="skills.html">题型解题</a>
+        <a href="plan.html">备考计划</a>
+    </div>
+
+    <div class="container">
+        <h1>四大题型解题技巧</h1>
+        <div class="tab-container">
+            <button class="tab-btn active" data-type="reading">阅读理解</button>
+            <button class="tab-btn" data-type="cloze">完形填空</button>
+            <button class="tab-btn" data-type="translation">翻译</button>
+            <button class="tab-btn" data-type="writing">作文</button>
+        </div>
+        <a><span style="font-size: 10px; color: #64748b;">注：本网页所有内容，均参考于大雁老师专升本</span></a>
+        <div id="reading" class="tab-item active">
+            <h3>📖 阅读理解</h3>
+            <p><strong>技巧：</strong>先读题干，再带着问题读文章；关注首尾段和每段首句。</p>
+            <p><strong>常见陷阱：</strong>偷换概念、过度推断、无中生有。</p>
+        </div>
+
+        <div id="cloze" class="tab-item">
+            <h3>🧩 完形填空</h3>
+            <p><strong>技巧：</strong>通读全文把握主旨；注意上下文逻辑和固定搭配。</p>
+            <p><strong>高频考点：</strong>连词、介词、动词短语、近义词辨析。</p>
+        </div>
+
+        <div id="translation" class="tab-item">
+            <h3>🔄 翻译（汉译英）</h3>
+            <p><strong>技巧：</strong>先确定主干结构（主谓宾），再添加修饰成分。</p>
+            <p><strong>避免中式英语：</strong>如 “open the light” ❌ → “turn on the light” ✅</p>
+        </div>
+
+        <div id="writing" class="tab-item">
+            <h3>✍️ 作文</h3>
+            <p><strong>结构：</strong>三段式（开头-主体-结尾），字数控制在120-150词。</p>
+            <p><strong>加分项：</strong>使用连接词（however, therefore, in addition）、高级词汇替换。</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="btn" onclick="window.location.href='grammar.html'">上一页</button>
+            <button class="btn" onclick="window.location.href='index.html'">返回首页</button>
+            <button class="btn" onclick="window.location.href='plan.html'">下一页</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    const type = this.getAttribute('data-type');
+                    document.getElementById(type).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

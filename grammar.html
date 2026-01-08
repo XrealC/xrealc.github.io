@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>语法重难点 - 英语专升本</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .center-title-with-image {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* 垂直居中对齐 */
+            gap: 0px;           /* 文字和图片之间的间距 */
+        }
+
+        .center-title-with-image {
+            margin: 0;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .center-title-with-image img {
+            width: 180px;
+            height: 100px;
+        }
+        .nav {
+            background: #1e40af;
+            padding: 12px 0;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .nav a:hover {
+            background: #334155;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #1e40af;
+            text-align: center;
+        }
+        .grammar-title {
+            cursor: pointer;
+            background: #dbeafe;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: bold;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        .grammar-title:hover {
+            background: #bfdbfe;
+        }
+        .grammar-content {
+            display: none;
+            padding: 15px;
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            margin: 10px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">首页</a>
+        <a href="vocab.html">词汇备考</a>
+        <a href="grammar.html">语法重难点</a>
+        <a href="skills.html">题型解题</a>
+        <a href="plan.html">备考计划</a>
+    </div>
+
+    <div class="container">
+        <h1 class="center-title-with-image">三大核心语法重难点</h1>
+        <a><span style="font-size: 10px; color: #64748b;">注：本网页所有内容，均参考于大雁老师专升本</span></a>
+        
+        <div class="grammar-section">
+            <div class="grammar-title">1️⃣ 时态（Tenses）</div>
+            <div class="grammar-content">
+                <p><strong>常考时态：</strong>一般现在时、现在完成时、过去完成时、将来进行时。</p>
+                <p><strong>易错点：</strong>时间状语搭配错误，如 since + 过去时间点需用现在完成时。</p>
+                <p><strong>例句：</strong>By the time he arrived, we <em>had already left</em>.</p>
+            </div>
+        </div>
+
+        <div class="grammar-section">
+            <div class="grammar-title">2️⃣ 从句（Clauses）</div>
+            <div class="grammar-content">
+                <p><strong>类型：</strong>定语从句、名词性从句（主语/宾语/表语从句）、状语从句。</p>
+                <p><strong>关键引导词：</strong>that, which, who, when, where, because, although...</p>
+                <p><strong>例句：</strong>The book <em>that you lent me</em> is very interesting.</p>
+            </div>
+        </div>
+
+        <div class="grammar-section">
+            <div class="grammar-title">3️⃣ 非谓语动词（Non-finite Verbs）</div>
+            <div class="grammar-content">
+                <p><strong>三种形式：</strong>to do（目的/将来），doing（主动/进行），done（被动/完成）。</p>
+                <p><strong>例句：</strong><em>Seeing</em> the teacher coming, the students stopped talking.</p>
+                <p><strong>例句：</strong>The homework <em>assigned yesterday</em> must be finished today.</p>
+            </div>
+        </div>
+
+        <!-- =============== 互动问答专区 =============== -->
+    <div class="interactive-quiz-section" style="
+        margin-top: 40px;
+        padding: 30px;
+        background-color: #f0f8ff;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;">
+        <h2>🎯 语法小测验</h2>
+        <p>点击按钮，随机测试你的语法掌握程度！</p>
+        <button onclick="showRandomQuiz()" style="
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;">出题！
+        </button>
+        <div id="quiz-container" style="margin-top: 20px;"></div>
+    </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="btn" onclick="window.location.href='vocab.html'">上一页</button>
+            <button class="btn" onclick="window.location.href='index.html'">返回首页</button>
+            <button class="btn" onclick="window.location.href='skills.html'">下一页</button>
+        </div>
+    </div>
+
+    <script>
+    const quizzes = [
+    {
+        question: "By the time he arrived, we ___ already left.",
+        options: ["had left", "have left", "left"],
+        answer: 0,
+        explanation: "过去完成时表示在过去某一时间之前已完成的动作。"
+    },
+    {
+        question: "Which sentence uses a relative clause correctly?",
+        options: [
+        "The book that you lent me is very interesting.",
+        "The book which you lent me is very interesting.",
+        "Both A and B are correct."
+        ],
+        answer: 2,
+        explanation: "在限定性定语从句中，that 和 which 可以互换（指物时），所以两个都对。"
+    },
+    {
+        question: "Choose the correct form: ___ the door, he went out.",
+        options: ["Closing", "Closed", "To close"],
+        answer: 0,
+        explanation: "'Closing the door' 是现在分词作伴随状语，表示主动且同时发生的动作。"
+    },
+    {
+        question: "She suggested ___ to the park.",
+        options: ["go", "going", "to go"],
+        answer: 1,
+        explanation: "suggest 后接动名词（doing），不能接 to do。"
+    }
+    ];
+
+    function showRandomQuiz() {
+    const randomQuiz = quizzes[Math.floor(Math.random() * quizzes.length)];
+    let optionsHtml = '';
+    randomQuiz.options.forEach((option, index) => {
+        optionsHtml += `
+        <label style="display:block; margin:8px 0; text-align: left; cursor:pointer;">
+            <input type="radio" name="userAnswer" value="${index}"> ${option}
+        </label>
+        `;
+    });
+
+    document.getElementById('quiz-container').innerHTML = `
+        <div style="background:white; padding:20px; border-radius:8px; text-align:left;">
+        <p><strong>Q:</strong> ${randomQuiz.question}</p>
+        <div>${optionsHtml}</div>
+        <button onclick="checkAnswer(${randomQuiz.answer}, '${randomQuiz.explanation.replace(/'/g, "\\'")}')" 
+                style="margin-top:10px; background:#28a745; color:white; border:none; padding:6px 12px; border-radius:4px;">
+            提交答案
+        </button>
+        </div>
+    `;
+    }
+
+    function checkAnswer(correctIndex, explanation) {
+        const selected = document.querySelector('input[name="userAnswer"]:checked');
+        if (!selected) {
+        alert("请选择一个答案！");
+        return;
+    }
+
+        const userAnswer = parseInt(selected.value);
+        const quiz = quizzes.find(q => q.answer === correctIndex);
+
+        if (userAnswer === correctIndex) {
+        document.getElementById('successMessage').textContent = "解析：" + quiz.options[correctIndex] + "\n" + explanation;
+        document.getElementById('successModal').style.display = 'block';
+        document.getElementById('successImage').src = 'zhengque.jpeg';
+    function closesuccessModal() {
+        document.getElementById('successModal').style.display = 'none';
+    }
+        document.getElementById('closeBtn01').addEventListener('click', closesuccessModal);
+    } else {
+    // 显示错误弹窗
+    document.getElementById('errorMessage').textContent = "正确答案是：" + quiz.options[correctIndex] + "\n" + explanation;
+    document.getElementById('errorImage').src = 'expression.jpg'; // 替换为你自己的图片路径
+    document.getElementById('errorModal').style.display = 'block';
+    }
+    function closeErrorModal() {
+        document.getElementById('errorModal').style.display = 'none';
+    }
+        document.getElementById('closeBtn').addEventListener('click', closeErrorModal);
+}
+</script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const titles = document.querySelectorAll('.grammar-title');
+            titles.forEach(title => {
+                title.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+
+    <!-- 错误提示模态框 -->
+    <div id="errorModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); max-width: 500px; text-align: center;">
+    <div style="font-size: 18px; color: #dc3545; margin-bottom: 10px;">❌ 错误</div>
+    <p id="errorMessage" style="margin: 10px 0;"></p>
+    <img id="errorImage" src="expression.jpg" alt="错误图片" style="width: 100%; width: 300px; height: 100px; margin: 10px auto; border-radius: 8px;">
+    <br>
+    <button id="closeBtn" style="background: #6c757d; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">关闭</button>
+    </div>
+
+    <!-- ✅ 正确提示弹窗 -->
+    <div id="successModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; border-radius: 12px; box-shadow:0 4px 20px rgba(0,0,0,0.3); max-width: 500px; text-align: center;">
+    <div style="font-size: 18px; color: black; margin-bottom: 10px;">✅ 正确</div>
+    <p id="successMessage" style="margin: 10px 0;"></p>
+    <img id="successImage" src="zhengque.jpeg" alt="正确图片" style="width:100%; width:300px; height: 100px; margin: 10px auto; border-radius: 8px;">
+    <br>
+    <button id="closeBtn01" style="background: #6c757d; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">关闭</button>
+</div>
+</body>
+</html>

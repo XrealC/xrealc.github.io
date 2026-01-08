@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>词汇备考 - 英语专升本</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .nav {
+            background: #1e40af;
+            padding: 12px 0;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .nav a:hover {
+            background: #334155;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #1e40af;
+            text-align: center;
+        }
+        ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #1d4ed8;
+        }
+        #checkResult {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #1e40af;
+            min-height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">首页</a>
+        <a href="vocab.html">词汇备考</a>
+        <a href="grammar.html">语法重难点</a>
+        <a href="skills.html">题型解题</a>
+        <a href="plan.html">备考计划</a>
+    </div>
+
+    <div class="container">
+        <h1>高频核心词汇（持续更新版）</h1>
+        <a><span style="font-size: 10px; color: #64748b;">注：本网页所有内容，均参考于大雁老师专升本</span></a>
+        <ul id="vocabList">
+            <li>abandon v. 放弃；抛弃</li>
+            <li>ability n. 能力；才能</li>
+            <li>absorb v. 吸收；理解</li>
+            <li>accent n. 口音；重音</li>
+            <li>accept v. 接受；承认</li>
+            <li>active adj. 积极的</li>
+            <li>advantage n. 优势；优点</li>
+            <li>affect v. 影响；感动</li>
+            <li>agree v. 同意；应允</li>
+            <li>allow v. 允许；给予</li>
+            <li>analyze v. 分析</li>
+            <li>announce v. 宣布</li>
+            <li>anxious adj. 焦虑的</li>
+            <li>apologize v. 道歉</li>
+            <li>appear v. 出现</li>
+            <li>apply v. 申请；应用</li>
+            <li>approach v. 接近</li>
+            <li>argue v. 争论</li>
+            <li>arrange v. 安排</li>
+            <li>assist v. 帮助</li>
+            <a style="font-size: 12px; color: red;">页面还在完善，尽情期待，持续更新中...</a>
+        </ul>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button id="checkBtn" class="btn">🎲 随机抽查一个单词</button>
+            <p id="checkResult"></p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="btn" onclick="window.location.href='index.html'">上一页</button>
+            <button class="btn" onclick="window.location.href='index.html'">返回首页</button>
+            <button class="btn" onclick="window.location.href='grammar.html'">下一页</button>
+        </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkBtn = document.getElementById('checkBtn');
+            const checkResult = document.getElementById('checkResult');
+            
+            if (!checkBtn || !checkResult) return;
+            
+            const vocabArr = [
+                "abandon v. 放弃；抛弃",
+                "ability n. 能力；才能",
+                "absorb v. 吸收；理解",
+                "accent n. 口音；重音",
+                "accept v. 接受；承认",
+                "active adj. 积极的",
+                "advantage n. 优势；优点",
+                "affect v. 影响；感动",
+                "agree v. 同意；应允",
+                "allow v. 允许；给予",
+                "analyze v. 分析",
+                "announce v. 宣布",
+                "anxious adj. 焦虑的",
+                "apologize v. 道歉",
+                "appear v. 出现",
+                "apply v. 申请；应用",
+                "approach v. 接近",
+                "argue v. 争论",
+                "arrange v. 安排",
+                "assist v. 帮助"
+            ];
+            
+            checkBtn.addEventListener('click', function() {
+                const randomIndex = Math.floor(Math.random() * vocabArr.length);
+                checkResult.innerHTML = `抽查单词：<strong>${vocabArr[randomIndex]}</strong>`;
+            });
+        });
+    </script>
+</body>
+</html>
