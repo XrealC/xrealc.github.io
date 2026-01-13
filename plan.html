@@ -88,6 +88,24 @@
         .btn:hover {
             background: #1d4ed8;
         }
+        .footer-text {
+            text-align: center;
+        }
+        .footer-text a {
+            text-decoration: none;
+            color: #bfdbfe;
+            font-size: 15px;
+        }
+        .footer-text a:hover{
+            color: brown;
+        }
+        .https-a {
+            text-decoration: none;
+            color: black;
+        }
+        .https-a:hover {
+            color: brown;
+        }
     </style>
 </head>
 <body>
@@ -107,13 +125,12 @@
             <p style="color: #64748b; font-size: 14px;">考试日期：2026年4月18日</p>
         </div>
         <div class="video-container">
+            <button onclick="playVideo()">点击播放视频</button>
             <video controls width="600" height="400" controls muted>
                 <source src="lizhishiping4.mp4" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
-            <button style="text-aglin: center;" onclick="playVideo()">点击播放视频</button>
         </div>
-        <a><span style="font-size: 10px; color: #64748b;">注：本网页所有内容，均参考于大雁老师专升本</span></a>
         <h2>一、三阶段备考计划（以6个月备考为例）</h2>
         
         <h3>📚 第一阶段（1-2月）：基础夯实期</h3>
@@ -134,25 +151,25 @@
         <h2>二、实用备考资源推荐</h2>
         <ul>
             <li>
-                <a href="https://space.bilibili.com/102262961" target="_blank" rel="noopener">
+                <a href="https://space.bilibili.com/102262961" target="_blank" rel="noopener" class="https-a">
                     📺 浙江英语专升本曹哥（B站）
                 </a>
                 <br><span style="font-size: 13px; color: #64748b;">网上流传：浙江专升本数学看杰哥，英语看曹哥！Brush!</span>
             </li>
             <li>
-                <a href="https://space.bilibili.com/2064569539" target="_blank" rel="noopener">
+                <a href="https://space.bilibili.com/2064569539" target="_blank" rel="noopener" class="https-a">
                     📺 专升本英语大雁（B站）⭐️⭐️⭐️
                 </a>
                 <br><span style="font-size: 13px; color: #64748b;">讲课风格生动有趣，适合基础薄弱的同学！</span>
             </li>
             <li>
-                <a href="https://www.bbdc.cn/index" target="_blank" rel="noopener">
+                <a href="https://www.bbdc.cn/index" target="_blank" rel="noopener" class="https-a">
                     📱 不背单词APP
                 </a>
                 <br><span style="font-size: 13px; color: #64748b;">查词+背词必备，可自制单词书，支持艾宾浩斯记忆法</span>
             </li>
             <li>
-                <a href="https://www.qianwen.com" target="_blank" rel="noopener">
+                <a href="https://www.qianwen.com" target="_blank" rel="noopener" class="https-a">
                     💬 通义千问（大模型AIGC）
                 </a>
                 <br><span style="font-size: 13px; color: #64748b;">练习口语、解答疑问、生成练习题的好帮手！</span>
@@ -165,7 +182,9 @@
             <button class="btn" onclick="window.location.href='index.html'">下一页</button>
         </div>
     </div>
-
+    <footer class="footer-text">
+        <a href="https://space.bilibili.com/2064569539" target="_blank">@2026 本网址内容均参考于刘晓艳老师</a>
+    </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const countDownEle = document.getElementById('countDown');
