@@ -83,6 +83,17 @@
         .btn:hover {
             background: #1d4ed8;
         }
+        .footer-text {
+            text-align: center;
+        }
+        .footer-text a {
+            text-decoration: none;
+            color: #bfdbfe;
+            font-size: 15px;
+        }
+        .footer-text a:hover{
+            color: brown;
+        }
     </style>
 </head>
 <body>
@@ -102,7 +113,6 @@
             <button class="tab-btn" data-type="translation">翻译</button>
             <button class="tab-btn" data-type="writing">作文</button>
         </div>
-        <a><span style="font-size: 10px; color: #64748b;">注：本网页所有内容，均参考于大雁老师专升本</span></a>
         <div id="reading" class="tab-item active">
             <h3>📖 阅读理解</h3>
             <p><strong>技巧：</strong>先读题干，再带着问题读文章；关注首尾段和每段首句。</p>
@@ -133,7 +143,9 @@
             <button class="btn" onclick="window.location.href='plan.html'">下一页</button>
         </div>
     </div>
-
+    <footer class="footer-text">
+        <a href="https://space.bilibili.com/2064569539" target="_blank">@2026 本网址内容均参考于刘晓艳老师</a>
+    </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const tabBtns = document.querySelectorAll('.tab-btn');
