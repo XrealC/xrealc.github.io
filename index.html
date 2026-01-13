@@ -57,6 +57,16 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             margin-bottom: 40px;
         }
+        .ai {
+            text-decoration: none; 
+            color: #64748b;
+        }
+        .ai span {
+            font-size: 12px;
+        }
+        .ai:hover {
+            color: brown;
+        }
         h1 {
             color: #1e40af;
             text-align: center;
@@ -97,6 +107,17 @@
             background: #1d4ed8;
             transform: translateY(-2px);
         }
+        .footer-text {
+            text-align: center;
+        }
+        .footer-text a {
+            text-decoration: none;
+            color: #bfdbfe;
+            font-size: 15px;
+        }
+        .footer-text a:hover{
+            color: brown;
+        }
     </style>
 </head>
 <body>
@@ -110,9 +131,7 @@
 
     <div class="container">
         <h1>🎯 英语专升本备考指南</h1>
-        <a href="https://www.qianwen.com" target="_blank"><span style="font-size: medium;">借用AI学习，可以更高效的理解英语</span></a>
-        <br>
-        <a><span style="font-size: 10px; color: #64748b;">注：本网页所有内容，均参考于大雁老师专升本</span></a>
+        <a href="https://www.qianwen.com" target="_blank" class="ai"><span>🤖借用AI学习，可以更高效的理解英语</span></a>
         <p>欢迎使用本备考资源站！我们为你整理了：</p>
         <ul>
             <li>✅ 高频核心词汇（20个精选）</li>
@@ -130,6 +149,9 @@
         <!-- 跳转到背单词页面的按钮 -->
         <a href="vocab.html" class="btn-go-vocab">📚 立即背单词</a>
     </div>
+    <footer class="footer-text">
+        <a href="https://space.bilibili.com/2064569539" target="_blank">@2026 本网址内容均参考于刘晓艳老师</a>
+    </footer>
 </body>
 <script>
     const quotes = [
