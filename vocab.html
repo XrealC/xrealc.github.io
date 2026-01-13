@@ -68,6 +68,17 @@
             color: #1e40af;
             min-height: 24px;
         }
+        .footer-text {
+            text-align: center;
+        }
+        .footer-text a {
+            text-decoration: none;
+            color: #bfdbfe;
+            font-size: 15px;
+        }
+        .footer-text a:hover{
+            color: brown;
+        }
     </style>
 </head>
 <body>
@@ -81,7 +92,6 @@
 
     <div class="container">
         <h1>高频核心词汇（持续更新版）</h1>
-        <a><span style="font-size: 10px; color: #64748b;">注：本网页所有内容，均参考于大雁老师专升本</span></a>
         <ul id="vocabList">
             <li>abandon v. 放弃；抛弃</li>
             <li>ability n. 能力；才能</li>
@@ -116,7 +126,10 @@
             <button class="btn" onclick="window.location.href='index.html'">返回首页</button>
             <button class="btn" onclick="window.location.href='grammar.html'">下一页</button>
         </div>
-
+    </div>
+    <footer class="footer-text">
+        <a href="https://space.bilibili.com/2064569539" target="_blank">@2026 本网址内容均参考于刘晓艳老师</a>
+    </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const checkBtn = document.getElementById('checkBtn');
